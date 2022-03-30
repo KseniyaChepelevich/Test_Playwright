@@ -12,13 +12,13 @@ test('test', async ({ page }) => {
   await page.locator('[placeholder="Email"]').click();
 
   // Fill [placeholder="Email"]
-  await page.locator('[placeholder="Email"]').fill('sinyawinalp10@gmail.com');
+  await page.locator('[placeholder="Email"]').fill(email);
 
   // Click [placeholder="Пароль"]
   await page.locator('[placeholder="Пароль"]').click();
 
   // Fill [placeholder="Пароль"]
-  await page.locator('[placeholder="Пароль"]').fill('K26A08s85');
+  await page.locator('[placeholder="Пароль"]').fill(password);
 
   // Click [data-testid="login-submit-btn"]
   await Promise.all([
