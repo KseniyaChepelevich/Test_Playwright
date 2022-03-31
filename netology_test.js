@@ -12,6 +12,8 @@ const authorization = require('./user');
 
     await page.goto('https://netology.ru/?modal=sign_in');
     page.waitForNavigation(/*{ timeout: 6000000000, url: 'https://netology.ru/?modal=sign_in' }*/),
+
+    await page.screenshot({ path: 'screenshot.png' });
    
 
     await page.locator('[placeholder="Email"]').click();
@@ -26,6 +28,7 @@ const authorization = require('./user');
       await page.pause();
 
       await expect(page).toHaveURL('https://netology.ru/profile');
+      await page.screenshot({ path: 'screenshot.png' });
     
     
 
