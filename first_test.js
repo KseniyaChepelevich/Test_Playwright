@@ -3,7 +3,7 @@ const authorization = require("./user");
 
 (async () => {
   const browser = await chromium.launch({
-    headless: false
+    headless: false, slowMo: 5000
   });
   const context = await browser.newContext();
 
