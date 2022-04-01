@@ -12,7 +12,7 @@ const authorization = require("./user");
 
   // Go to https://netology.ru/
   await page.goto('https://netology.ru/');
-  page.waitForNavigation(/*{ timeout: 600000000000; url: 'https://netology.ru/?modal=sign_in'; waitUntill: 'domcontentloaded' }*/),
+  await page.waitForNavigation(/*{ timeout: 600000000000; url: 'https://netology.ru/?modal=sign_in'; waitUntill: 'domcontentloaded' }*/),
  
   // Click text=Войти
   await page.locator('text=Войти').click();
